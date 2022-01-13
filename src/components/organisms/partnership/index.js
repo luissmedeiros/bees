@@ -1,20 +1,22 @@
-import { Divider, Typography, useTheme, Box, Button, Stack } from '@mui/material';
+import { Divider, Typography, useTheme, Box, Button, Stack} from '@mui/material';
 import { Columns } from 'components/wrappers';
-import React from 'react';
+import Link from 'next/link'
 
 function Partnership(props) {
     const theme = useTheme()
     return (
-        <Columns bgColor={theme.palette.dark.main} overrideWrap={{xs: 12, sm: 6, md: 6, lg: 6}} wrap='reverse'>
+        <Columns bgColor={theme.palette.dark.main} overrideWrap={{xs: 12, sm: 6, md: 6, lg: 6}} wrap='wrap-reverse'>
             <Stack spacing={3} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100%'}}>
                 <Typography color={'white'} variant='h1' sx={{fontSize: '39px', [theme.breakpoints.down('md')]: {fontSize: '26px'}, fontWeight: '500', [theme.breakpoints.down('lg')]: {fontSize: '34px'}}}>
                     Innovate your institution with 
                     BEES and impact Brazilian and 
                     global education.
                 </Typography>
-                <Button variant='action dark' sx={{alignSelf: 'flex-start', [theme.breakpoints.down('md')]: {alignSelf: 'center !important'}}}>
-                    Become Our Partner
-                </Button>
+                <Link href='/be-a-partner' passHref>
+                    <Button variant='action dark' sx={{alignSelf: 'flex-start', [theme.breakpoints.down('md')]: {alignSelf: 'center !important'}}}>
+                        Become Our Partner
+                    </Button>
+                </Link>
             </Stack>
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent:'center'}}>
                 <Box sx={{flex: 1, position: 'relative', [theme.breakpoints.down('sm')] : {display: 'none'}}}>

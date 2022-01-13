@@ -1,5 +1,6 @@
 import { Typography, Button, Box, Grid, useTheme, Stack } from "@mui/material";
 import { Page } from "components/wrappers";
+import Link from "next/link";
 
 export default function Countries(){
     const theme = useTheme()
@@ -16,13 +17,17 @@ export default function Countries(){
                                 Now open to all ages
                             </Typography>
                         </Stack>
-                        <Stack sx={{width: 'fit-content'}} >
-                            <Button variant='action light'>
-                                Pre-Register Now
-                            </Button>
-                            <Button variant='link' sx={{alignSelf: 'center', color: '#28282880', '&:hover': {color: '#282828'}}}>
-                                Learn More
-                            </Button>
+                        <Stack sx={{width: 'fit-content'}}>
+                            <Link href='/be-a-partner' passHref>
+                                <Button variant='action light'>
+                                    Pre-Register Now
+                                </Button>
+                            </Link>
+                            <Link href='/about-us' passHref>
+                                <Button variant='link' sx={{alignSelf: 'center', color: '#28282880', '&:hover': {color: '#282828'}}}>
+                                    Learn More
+                                </Button>
+                            </Link>
                         </Stack>
                     </Stack>
                 </Grid>

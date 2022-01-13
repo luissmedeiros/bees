@@ -1,8 +1,8 @@
-import { ArrowBackIos, ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
+import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
 import { Grid, Box, Button, IconButton } from '@mui/material'
 import { useTheme } from '@mui/system';
 import { Deposition } from 'components/atoms';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 function Carousel(props) {
     const [page, setPage] = useState(0)
@@ -40,14 +40,20 @@ function Carousel(props) {
         setPage(page-1)
     }
 
+    const handleResize = useCallback( ()=>{
+        const container = document.getElementById('carousel')
+        if(!container) return
+        container.scroll({left: 0})
+        if(page != 0){
+            setPage(0)
+        }
+    })
+
     useEffect(() => {
-        window.addEventListener('resize', ()=>{
-            const container = document.getElementById('carousel')
-            container.scroll({left: 0})
-            if(page != 0){
-                setPage(0)
-            }
-        })
+        window.addEventListener('resize', handleResize)
+       return () => {
+           window.removeEventListener('resize', handleResize)
+       } 
     }, [])
     return (
         <Box sx={{p: '0px 15px', mr: '16px'}}>
@@ -70,9 +76,9 @@ function Carousel(props) {
                 marginLeft: '0px',
                 ...props.sx
             }}>
-                {[0,1,2,3,4].map( (depo, index) => {
+                {props.depositions.map( (depo, index) => {
                     return(
-                        <Grid key={`deposition_${index}`} item sm={6} xs={12} md={6} lg={4} sx={{flexShrink: 0, scrollSnapAlign: 'start'}} className='carousel-item'>
+                        <Grid key={`deposition_${index}`} item sm={6} xs={12} md={6} lg={props.depositions.length >= 3 ? 4 : 6} sx={{flexShrink: 0, scrollSnapAlign: 'start'}} className='carousel-item'>
                             <Deposition deposition={depo}/>
                         </Grid> 
                     )

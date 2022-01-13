@@ -1,5 +1,6 @@
 import { Page } from "components/wrappers";
 import { Box, Grid, Typography, useTheme, Button, Stack } from "@mui/material";
+import Link from "next/link";
 
 export default function Summary(){
     const theme = useTheme()
@@ -10,7 +11,7 @@ export default function Summary(){
             </Box>
             <Box sx={{position: 'relative', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', pb: '20px', [theme.breakpoints.down('lg')]: {display: 'none'} }}>
                 <img src='/quotes.svg' style={{position: 'absolute', top: 0, left: 0, height: '42px', zIndex: 1}}/>
-                <Typography variant='h1' sx={{maxWidth: '672px', fontSize: 39, zIndex: 3, mt: '20px', ml: '35px'}}>
+                <Typography variant='h1' sx={{maxWidth: '672px', fontSize: '39px', zIndex: 3, mt: '20px', ml: '35px'}}>
                     We are a social enterprise that promotes dynamic and innovative learning with a focus
                     on <b>Business</b>, <b>Economics</b>, <b>Entrepreneurship</b>, and <b>Sustainability</b>
                 </Typography>
@@ -23,9 +24,11 @@ export default function Summary(){
                         We are a social enterprise that promotes dynamic and innovative learning with a focus
                         on <b>Business</b>, <b>Economics</b>, <b>Entrepreneurship</b>, and <b>Sustainability</b>
                         </Typography>
-                        <Button variant='action light' sx={{[theme.breakpoints.down('md')]: {alignSelf: 'center'}}}>
-                            Know More About Us
-                        </Button>
+                        <Link href='/about-us' passHref>
+                            <Button variant='action light' sx={{[theme.breakpoints.down('md')]: {alignSelf: 'center'}}}>
+                                Know More About Us
+                            </Button>
+                        </Link>
                     </Stack>
                 </Grid>
                 <Grid item xs={12} sm={5}>

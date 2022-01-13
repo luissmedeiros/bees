@@ -1,6 +1,6 @@
 import {Building} from "components/organisms";
 
-export default function CompetitionGlobal(){
+export default function LatestNews(){
 
     return(
         <> 

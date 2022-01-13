@@ -1,4 +1,5 @@
 import { Box, Stack, Grid, Divider, Typography, Button, useTheme } from "@mui/material"
+import Link from "next/link"
 import { Page } from "components/wrappers"
 import ReactPlayer from "react-player"
 import styles from './discover.module.css'
@@ -31,9 +32,11 @@ export default function Discover(){
                             A problem-solving competition to create innovative solutions for real-world problems 
                         </Typography>
                         <Stack>
-                            <Button variant='action dark' sx={{alignSelf: 'center'}}>
-                                Pre-Register Now
-                            </Button>
+                            <Link href='/be-a-partner' passHref>
+                                <Button variant='action dark' sx={{alignSelf: 'center'}}>
+                                    Pre-Register Now
+                                </Button>
+                            </Link>
                             <Button variant='link' sx={{[theme.breakpoints.down('md')]: {display: 'none'}}}>
                                 Learn More
                             </Button>

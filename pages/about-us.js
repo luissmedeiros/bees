@@ -1,15 +1,14 @@
-import {Summary, Discover, Deposition, Countries, Products, Partnership} from "components/templates";
+import {Summary, Discover, Deposition, Countries, Products, Partnership, ContactUs, Authors, Mission, Bees} from "components/organisms";
 
-export default function CompetitionHome(){
+export default function AboutUs(){
 
     return(
         <> 
-            <Summary/>
-            <Discover/>
-            <Deposition/>
-            <Countries/>
-            <Products/>
-            <Partnership/>
+            <Mission/>
+            <Bees/>
+            <Authors/>
+            <Products alt/>
+            <ContactUs alt/>
         </>
     )
 }

@@ -1,7 +1,7 @@
 import { Box, Typography, Stack, Button, Popper, Divider, useTheme} from "@mui/material"
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Link from 'next/link'
-import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material"
+import { ArrowDropDown, ArrowDropUp, Phone } from "@mui/icons-material"
 import { useRouter } from "next/router"
 
 export default function NavBar({hotlinks}){
@@ -30,17 +30,33 @@ const Multiple = ({link, activeRoute}) => {
 
     const [anchor, setAnchor] = useState(false)
     const [width, setWidth] = useState(0)
+    
+    const open = Boolean(anchor)
 
     const handleClick = (event) => {
         setAnchor(anchor ? null : event.currentTarget);
         setWidth(`${anchor ? 0 : event.currentTarget.offsetWidth}px`)
     }
 
-    const open = Boolean(anchor)
+    const handleScroll = useCallback(()=>{
+        if(open){
+            if(anchor){
+                setAnchor(null)
+            }
+        }
+    }, [anchor])
+
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll, true)
+        return () => {
+            window.removeEventListener('scroll', handleScroll, true)
+        }
+    }, [anchor])
+
 
     return(
         <>
-            <Button onClick={handleClick} variant={`navbar${activeRoute.includes(link.route) ? ' active' : ''}`}>
+            <Button onClick={handleClick} variant={`navbar${activeRoute.includes(link.route) ? ' active' : open ? ' active' : ''}`} disableRipple>
                 <Stack direction={'row'} sx={{alignItems: 'center'}}>
                     {link.title}
                     {open ? 
@@ -51,8 +67,8 @@ const Multiple = ({link, activeRoute}) => {
 
                 </Stack>
             </Button>
-            <Popper open={open} anchorEl={anchor}>
-                <Box sx={{ p: 1, bgcolor: '#E9E9E9', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px', width}}>
+            <Popper open={open} anchorEl={anchor} style={{zIndex: 99, width}}>
+                <Box sx={{ p: 1, bgcolor: '#E9E9E9', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px'}}>
                     <Stack>
                         {link.options.map( (option, index) => {
                             return(
@@ -76,7 +92,7 @@ const Multiple = ({link, activeRoute}) => {
 const Single = ({link, activeRoute}) => {
     return(
         <Link href={link.route} passHref >
-            <Button variant={`navbar${activeRoute.includes(link.route) ? ' active' : ''}`}>
+            <Button variant={`navbar${activeRoute.includes(link.route) ? ' active' : ''}`} disableRipple>
                 {link.title}
             </Button>
         </Link>

@@ -1,7 +1,7 @@
 import { Stack, useTheme, useThemeProps } from "@mui/material"
 import { Logo, NavBar } from "components/atoms"
 import { Box } from "@mui/material"
-import { navigation } from 'styles'
+import { navigation } from 'settings'
 import Link from "next/link"
 
 export default function Header(){

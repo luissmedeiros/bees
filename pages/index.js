@@ -1,4 +1,4 @@
-import {Summary, Discover, Deposition, Countries, Products, Partnership} from "components/templates";
+import {Summary, Discover, Deposition, Countries, Products, Partnership, ContactUs} from "components/organisms";
 
 export default function Main(){
 
@@ -10,6 +10,7 @@ export default function Main(){
             <Countries/>
             <Products/>
             <Partnership/>
+            <ContactUs/>
         </>
     )
 }

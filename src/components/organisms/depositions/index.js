@@ -1,6 +1,7 @@
 import { Typography, useTheme, Box, Stack, Grid } from '@mui/material';
 import { Carousel } from 'components/molecules';
 import { Page } from 'components/wrappers'
+import { depositions } from 'settings';
 
 function Deposition(props) {
     const theme = useTheme()
@@ -13,7 +14,7 @@ function Deposition(props) {
                 </Typography>
             </Box>
             <Box sx={{position: 'relative', zIndex: 3}}>
-                <Carousel sx={{transform: 'translatey(-100px)', [theme.breakpoints.down('md')]: {}}}/>
+                <Carousel sx={{transform: 'translatey(-100px)'}} depositions={depositions}/>
             </Box>
         </Page>
     );

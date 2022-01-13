@@ -1,5 +1,5 @@
 import { CssBaseline, ThemeProvider, Box} from "@mui/material"
-import { Header } from "components/molecules"
+import { Header, Footer } from "components/molecules"
 import { theme } from "styles"
 
 export default function App({ Component, pageProps }) {
@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }) {
           <Box sx={{height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column', alignItems: 'center', overflowY: 'scroll', overflowX: 'hidden'}}>
             <Header/>
             <Component {...pageProps}/>
+            <Footer/>
           </Box>
       </ThemeProvider>
   )

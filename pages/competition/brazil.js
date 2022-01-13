@@ -1,15 +1,10 @@
-import {Summary, Discover, Deposition, Countries, Products, Partnership} from "components/templates";
+import {Building} from "components/organisms";
 
 export default function CompetitionBrazil(){
 
     return(
         <> 
-            <Summary/>
-            <Discover/>
-            <Deposition/>
-            <Countries/>
-            <Products/>
-            <Partnership/>
+            <Building/>
         </>
     )
 }
