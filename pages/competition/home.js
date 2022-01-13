@@ -1,3 +1,15 @@
-import {Main} from "components/templates"
+import {Summary, Discover, Deposition, Countries, Products, Partnership} from "components/templates";
 
-export default Main;
+export default function CompetitionHome(){
+
+    return(
+        <> 
+            <Summary/>
+            <Discover/>
+            <Deposition/>
+            <Countries/>
+            <Products/>
+            <Partnership/>
+        </>
+    )
+}

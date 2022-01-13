@@ -75,8 +75,8 @@ const Multiple = ({link, activeRoute}) => {
 
 const Single = ({link, activeRoute}) => {
     return(
-        <Link href={link.route} passHref>
-            <Button variant='navbar'>
+        <Link href={link.route} passHref >
+            <Button variant={`navbar${activeRoute.includes(link.route) ? ' active' : ''}`}>
                 {link.title}
             </Button>
         </Link>
