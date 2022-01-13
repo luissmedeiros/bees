@@ -1,0 +1,6 @@
+export {default as Summary} from './summary'
+export {default as Discover} from './discover'
+export {default as Deposition} from './depositions'
+export {default as Countries} from './countries'
+export {default as Products} from './products'
+export {default as Partnership} from './partnership'

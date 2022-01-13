@@ -1,0 +1,14 @@
+.reactPlayer {
+    padding-top: 56.25%;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+  
+.reactPlayer > div {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0
+}
