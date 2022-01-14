@@ -17,7 +17,7 @@ export default function Summary(){
                 </Typography>
                 <img src='/main-svg.svg' style={{position: 'absolute', right: 0, top: 0, zIndex: 1}}/>
             </Box>
-            <Grid container spacing={1} sx={{ pt: 4, pb: 4, [theme.breakpoints.up('lg')]: {display: 'none'}}} wrap="reverse">
+            <Grid container spacing={1} sx={{ pt: 4, pb: 4, [theme.breakpoints.up('lg')]: {display: 'none'}}} flexWrap="wrap-reverse">
                 <Grid item xs={12} sm={7} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                     <Stack spacing={2} sx={{}}>
                         <Typography sx={{fontSize: '1.2rem'}}>
