@@ -68,7 +68,7 @@ const Multiple = ({link, activeRoute}) => {
                 </Stack>
             </Button>
             <Popper open={open} anchorEl={anchor} style={{zIndex: 99, width}}>
-                <Box sx={{ p: 1, bgcolor: '#E9E9E9', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px'}}>
+                <Box sx={{ p: 1, bgcolor: '#E9E9E9', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px', mt: '10px'}}>
                     <Stack>
                         {link.options.map( (option, index) => {
                             return(

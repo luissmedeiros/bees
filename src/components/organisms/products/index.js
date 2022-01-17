@@ -13,7 +13,7 @@ function Products(props) {
             </Box>
             <Box sx={{display: 'flex', height: '100%', alignItems: 'center', justifyContent: 'center', position: 'relative'}}>
                 <Stack spacing={3} sx={{position:'relative', zIndex: 1}}>
-                    <Typography sx={{fontSize: '31px', maxWidth: '512px'}}>
+                    <Typography variant='h1' sx={{fontSize: '31px', maxWidth: '512px'}}>
                         Want to know more about our initiatives and products? Stay updated!
                     </Typography>
                     <Link href='/be-a-partner' passHref>

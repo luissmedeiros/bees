@@ -6,11 +6,11 @@ export default function Countries(){
     const theme = useTheme()
     return(
         <Page minHeight='0px' bgColor={theme.palette.primary.main}>
-            <Grid container spacing={2} sx={{pb: '40px'}} wrap="reverse">
+            <Grid container spacing={2} sx={{pb: '40px'}} flexWrap={'wrap-reverse'}>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <Stack spacing={4}>
+                    <Stack spacing={{xs: 2, sm: 2, md: 4, lg: 4}}>
                         <Stack spacing={1} sx={{display: 'flex'}}>
-                            <Typography variant='h5' sx={{fontSize: 31, maxWidth: '512px'}}>
+                            <Typography variant='h1' sx={{maxWidth: '512px'}}>
                                 Started out as a student competition, but is now open to everyone who wants to innovate
                             </Typography>
                             <Typography sx={{[theme.breakpoints.down('md')]: {textAlign: 'center', alignSelf: 'center'}}}>
@@ -32,7 +32,7 @@ export default function Countries(){
                     </Stack>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <Box sx={{alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
+                    <Box sx={{alignItems: 'center', justifyContent: 'center', display: 'flex', [theme.breakpoints.down('md')]: {marginBottom: '20px'}}}>
                         <img src="/map.svg" style={{maxWidth: '100%', maxHeight: '100%'}}/>
                     </Box>
                 </Grid>

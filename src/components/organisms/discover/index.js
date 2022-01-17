@@ -17,7 +17,11 @@ export default function Discover(){
             <Grid container sx={{minHeight: 'fit-content', pt: '60px', pb: '60px'}} spacing={2}>
                 <Grid item sx={{position: 'relative', alignItems: 'center', display: 'flex', justifyContent: 'center'}} sm={12} xs={12} md={5} lg={5}>
                     <Box sx={{position: 'relative', width: '100%', height: '100%'}}>
-                        <ReactPlayer url='https://youtu.be/oH43sQDRAbk' className={styles.reactPlayer} height='inherit' width={'inherit'}/>
+                        <Box className={styles.reactPlayer}>
+                            <div>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oH43sQDRAbk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
+                            </div>
+                        </Box>
                         <Stack sx={{position: 'absolute', height: '100%', transform: 'translate(-90%,0)', justifyContent: 'space-evenly', top: 0}}>
                             {[0,1,2].map( item => <Box key={`stripe_${item}`} sx={{width: '100vw', position: 'relative', backgroundColor: '#FEA224', height: '50px', zIndex: 2}}/>)}
                         </Stack>

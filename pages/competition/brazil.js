@@ -1,10 +1,14 @@
-import {Building} from "components/organisms";
+import {Building, Steps, Fees, ContactUs, Trophy} from "components/organisms";
 
 export default function CompetitionBrazil(){
 
     return(
         <> 
-            <Building/>
+            <Steps brazil/>
+            <Fees brl/>
+            <Trophy/>
+            <ContactUs/>
+            {/* <Steps brazil/> */}
         </>
     )
 }

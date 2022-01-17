@@ -4,6 +4,8 @@
     z-index: 2;
     border-radius: 20px;
     overflow: hidden;
+    width: inherit;
+    height: inherit;
 }
   
 .reactPlayer > div {

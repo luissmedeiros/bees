@@ -35,6 +35,20 @@ const animations = {
 const font = "'Montserrat'"
 
 let theme = createTheme(colors, {
+    typography: {
+        h1:{
+            fontSize: '2.7vw',
+            [colors.breakpoints.down('md')]: {fontSize: '1.8rem !important'}
+        },
+        h2:{
+            fontSize: '2.3vw',
+            [colors.breakpoints.down('md')]: {fontSize: '1.6rem !important'}
+        },
+        h3:{
+            fontSize: '1.9vw',
+            [colors.breakpoints.down('md')]: {fontSize: '1.4rem !important'}
+        }
+    },
     components:{
         MuiTypography: {
             defaultProps: {
@@ -43,7 +57,7 @@ let theme = createTheme(colors, {
             styleOverrides:{
                 root:{
                     [colors.breakpoints.down('md')]: {textAlign: 'center', alignSelf: 'center'} 
-                }
+                },
             }
         },
         MuiStack:{
