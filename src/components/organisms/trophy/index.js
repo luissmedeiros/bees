@@ -9,7 +9,7 @@ export default function Trophy(){
             <Grid container sx={{pt: '40px', pb: '40px'}}>
                 <Grid item xs={12} sm={12} md={6} lg={6} sx={{display: 'flex', alignItems: 'center' , justifyContent: 'flex-end', [theme.breakpoints.down('md')]: {justifyContent: 'center'} }}>
                     <Box sx={{position: 'relative', width: 'fit-content'}}>
-                        <img src='/trophy.svg' style={{position: 'relative', zIndex: 3}}/>
+                        <img src='/trophy.svg' height='335px' width={'377px'} style={{position: 'relative', zIndex: 3}}/>
                         <Stack sx={{position: 'absolute', height: '90%', transform: 'translate(calc(-100% + 179px),0)', justifyContent: 'space-evenly', top: 10}}>
                             {[0,1,2].map( item => <Box key={`stripe_${item}`} sx={{width: '100vw', position: 'relative', backgroundColor: '#FEA224', height: '50px', zIndex: 2}}/>)}
                         </Stack>

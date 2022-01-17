@@ -88,7 +88,7 @@ export default function Steps({brazil}){
             <Stack spacing={12} sx={{pt: '40px', pb: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <Stack spacing={3}>
                     <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <img src={`/bees-${brazil ? 'brazil' : 'global'}.svg`}/>
+                        <img height='297px' width={'256px'} src={`/bees-${brazil ? 'brazil' : 'global'}.svg`}/>
                     </Box>
                     <Typography sx={{maxWidth: '876px', fontSize: '19px', textAlign: 'center', color: theme.palette.dark.main}}>
                         {brazil ? 
