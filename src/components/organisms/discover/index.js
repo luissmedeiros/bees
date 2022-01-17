@@ -1,7 +1,6 @@
 import { Box, Stack, Grid, Divider, Typography, Button, useTheme } from "@mui/material"
 import Link from "next/link"
 import { Page } from "components/wrappers"
-import ReactPlayer from "react-player"
 import styles from './discover.module.css'
 
 export default function Discover(){
