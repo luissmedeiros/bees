@@ -33,7 +33,7 @@ export default function Footer(){
                     </Stack>
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <Stack spacing={1}>
+                    <Stack spacing={1} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                         <Seal color={theme.palette.primary.main} width='auto' height='128'/>
                         <Typography color='#626262' fontSize={'12px'}>
                             All rights reserved by BEES Global

@@ -1,35 +1,38 @@
 import { Box, Typography, useTheme, Stack } from '@mui/material'
 import { Columns } from "components/wrappers";
 
-export default function Authors(){
+export default function Judges(){
     const theme = useTheme()
     return(
-        <Columns title={'The faces behind BEES'} overrideWrap={{md: 12}}>
+        <Columns title={'2021 Judges'} overrideWrap={{md: 12}} spacing={2}>
             <Stack sx={{display: 'flex', alignItems: 'center', justifyContent:'center', flexDirection: 'column', pb: '20px'}} spacing={2}>
                 <Box sx={{backgroundColor: theme.palette.primary.main, width: 'fit-content', height: 'fit-content', borderRadius: '200px', padding: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <img src='/carolina_ferrer.png' style={{ borderRadius: '200px'}}/>
+                    <img src='/liliam_benzi.png' style={{ borderRadius: '200px'}}/>
                 </Box>
                 <Stack sx={{display: 'flex', alignItems: 'center'}}>
                     <Typography sx={{fontSize: '28px', fontWeight: 'bold'}}>
-                        Carolina Ferrer
+                        Liliam Benzi
                     </Typography>
                     <Typography sx={{textAlign: 'center'}}>
-                    Chief Executive Owner of BEES Global, 
-                    Study-Abroad Mentor and Entrepreneur
+                        LDB’s CEO. Specialist in communication, 
+                        marketing, and entrepreneurial strategies
                     </Typography>
                 </Stack>
             </Stack>
             <Stack sx={{display: 'flex', alignItems: 'center', justifyContent:'center', flexDirection: 'column', pb: '20px'}} spacing={2}>
                 <Box sx={{backgroundColor: theme.palette.primary.main, width: 'fit-content', height: 'fit-content', borderRadius: '200px', padding: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <img src='/anna_aragao.png' style={{ borderRadius: '200px'}}/>
+                    <img src='/anderson_diehl.png' style={{ borderRadius: '200px'}}/>
                 </Box>
                 <Stack sx={{display: 'flex', alignItems: 'center'}}>
                     <Typography sx={{fontSize: '28px', fontWeight: 'bold'}}>
-                        Anna Aragão
+                        Anderson Diehl
                     </Typography>
                     <Typography sx={{textAlign: 'center'}}>
-                    Chief Financial Owner of BEES Global, 
-                    Project Consultant and Entrepreneur
+                        Marketing Director at Advn/rs, Director 
+                        of Innovation and connection with 
+                        startups at Assespro.
+                        Founder of the 
+                        Angel Investor Club
                     </Typography>
                 </Stack>
             </Stack>
@@ -42,9 +45,9 @@ export default function Authors(){
                         Fellipe Almeida
                     </Typography>
                     <Typography sx={{textAlign: 'center'}}>
-                        {`Investing partner of BEES Global and the 
-                        law firm Bastos, Covre & Pinheiro Advogados
-                        Associados, Business Mentor and Entrepreneur`}
+                        Partner of the firm Bastos, Covre & 
+                        Pinheiro Lawyers. Creator and 
+                        Coordinator of BCP Start.
                     </Typography>
                 </Stack>
             </Stack>

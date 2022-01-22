@@ -47,6 +47,10 @@ let theme = createTheme(colors, {
         h3:{
             fontSize: '1.9vw',
             [colors.breakpoints.down('md')]: {fontSize: '1.4rem !important'}
+        },
+        h4:{
+            fontSize: '1.6vw',
+            [colors.breakpoints.down('md')]: {fontSize: '1rem !important'}
         }
     },
     components:{

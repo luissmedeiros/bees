@@ -1,6 +1,6 @@
 import { Flag, RemoveRedEye, Diamond } from '@mui/icons-material';
 import { Typography, Box, Stack, useTheme } from '@mui/material';
-import { Columns } from 'components/wrappers';
+import { Columns, Page } from 'components/wrappers';
 import React from 'react';
 
 function Mission(props) {
@@ -82,7 +82,6 @@ function Mission(props) {
                     </Stack>
                 </Stack>
             </Box>
-
         </Columns>
     );
 }
