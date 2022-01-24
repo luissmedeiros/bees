@@ -54,8 +54,8 @@ export default function Competition(){
                     </Box>
                 </Grid>
             </Grid>
-            <Box sx={{mb: 0, mt: 0, width: '100vw', alignSelf: 'center'}}>
-                <img src='/curve.svg' style={{width: '100%', transform: 'translateY(8px)'}}/>
+            <Box sx={{mb: 0, mt: '20px', width: '100vw', alignSelf: 'center', alignItems: 'center', display: 'flex'}}>
+                <img src='/curve.svg' style={{width: '100%', transform: 'translate(-6px,6px)'}}/>
             </Box>
         </Page>
     )

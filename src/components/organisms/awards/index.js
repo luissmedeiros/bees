@@ -91,7 +91,7 @@ function Awards(props) {
                     <Grid container spacing={3}>
                         {cards.map( item => {
                             return(
-                                <Grid key={`card_${item.title}`} item xs={6} sm={6} md={3} lg={3}>
+                                <Grid key={`card_${item.title}`} item xs={12} sm={6} md={3} lg={3}>
                                     <Card title={item.title} desc={item.desc}/>
                                 </Grid>
                             )
